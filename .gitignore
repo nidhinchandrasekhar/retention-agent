@@ -1,0 +1,20 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Generated at runtime (rebuild with: python -m retention_agent demo)
+data/
+outputs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/

@@ -1,0 +1,10 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    { "name": "Demo (generate + run + eval)", "type": "debugpy", "request": "launch", "module": "retention_agent", "args": ["demo"], "console": "integratedTerminal" },
+    { "name": "Daily run", "type": "debugpy", "request": "launch", "module": "retention_agent", "args": ["run"], "console": "integratedTerminal" },
+    { "name": "Explain one customer", "type": "debugpy", "request": "launch", "module": "retention_agent", "args": ["explain", "C9007"], "console": "integratedTerminal" },
+    { "name": "Dashboard", "type": "debugpy", "request": "launch", "module": "streamlit", "args": ["run", "dashboard/app.py"], "console": "integratedTerminal" },
+    { "name": "Pytest", "type": "debugpy", "request": "launch", "module": "pytest", "console": "integratedTerminal" }
+  ]
+}

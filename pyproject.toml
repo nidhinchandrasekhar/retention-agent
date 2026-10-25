@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "retention-agent"
+version = "0.1.0"
+description = "Multi-agent retention offer system for a prepaid telecom segment (LangGraph + Chroma + Streamlit), built on synthetic data"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "langgraph>=1.0",
+    "chromadb>=1.0",
+    "pydantic>=2.6",
+    "pandas>=2.0",
+    "numpy>=1.26",
+    "openai>=1.30",
+    "python-dotenv>=1.0",
+    "streamlit>=1.35",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+sqlite-checkpoint = ["langgraph-checkpoint-sqlite>=2.0"]
+sentence-transformers = ["sentence-transformers>=3.0"]
+
+[tool.setuptools.packages.find]
+include = ["retention_agent*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
